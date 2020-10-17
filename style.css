@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+:root {
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #001229;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  margin: 30px auto;
+  width: 350px;
+}
+
+h1 {
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+h2 {
+  margin: 20px 0 7px 0;
+}
+
+h3 {
+  padding-bottom: 10px;
+  margin: 40px 0 10px;
+}
+
+.history {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 51, 122, 1);
+}
+
+.title {
+  color: #d6e7ff;
+}
+
+#date {
+  margin-left: 0.2em;
+  color: #ebf3ff;
+}
+
+h4 {
+  color: #d6e7ff;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+h5 {
+  font-weight: 100;
+  margin: 3px 0;
+}
+
+.inc-exp-container {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin: 1px 0;
+  background-color: #002352;
+  border-radius: 10px;
+}
+
+.inc-exp-container > div {
+  flex: 1;
+  text-align: center;
+}
+
+.calories {
+  font-size: 72px;
+  margin: 5px 0;
+  padding: 0 0.1em;
+}
+
+.calories.plus {
+  color: #2ecc71;
+}
+
+.calories.minus {
+  color: #d83137;
+}
+
+label {
+  color: #ebf3ff;
+  font-weight: 100;
+  display: inline-block;
+  margin: 10px 0;
+}
+
+input[type="text"],
+input[type="number"] {
+  border: 1px solid #272727;
+  border-radius: 4px;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: #003f8b;
+  box-shadow: var(--box-shadow);
+  color: #fff;
+  border: 0;
+  display: block;
+  font-size: 16px;
+  margin: 10px 0 30px;
+  padding: 10px;
+  width: 100%;
+}
+
+.btn:focus,
+.delete-btn:focus {
+  outline: 0;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.list li {
+  background-color: #ebf3ff;
+  border-radius: 20px;
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.list li.plus {
+  border-right: 5px solid#d83137;
+}
+
+.list li.minus {
+  border-right: 5px solid #cc0605;
+}
+
+.delete-btn {
+  cursor: pointer;
+  background-color: #e74c3c;
+  border: 0;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 1px 2px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(100%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.list li:hover .delete-btn {
+  opacity: 1;
+}

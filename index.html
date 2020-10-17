@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Ridiculously Simple Calorie Tracker</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="inc-exp-container">
+        <div>
+          <h4>Consumed</h4>
+          <p id="calories-plus" class="calories plus">0</p>
+        </div>
+        <div>
+          <h4>Remaining</h4>
+          <p id="calories-minus" class="calories minus">2000</p>
+        </div>
+      </div>
+      <h2 class="title">What did you just eat?</h3>
+      <form id="form">
+        <div class="form-control">
+          <label for="text">Food Item</label>
+          <input type="text" id="text" placeholder="Enter food item..." />
+        </div>
+        <div class="form-control">
+          <label for="amount">Amount <br /> </label>
+          <input
+            type="number"
+            id="amount"
+            placeholder="Enter calories consumed..."
+          />
+        </div>
+        <button class="btn">Add Item</button>
+      </form>
+      <hr  class="history" />
+      <h2 class="title">Today's History</h3>
+      <h5 id="date"></h5>
+      <ul id="list" class="list"></ul>
+    </div>
+    <script type="module" src="dist/bundle.js"></script>
+  </body>
+</html>
